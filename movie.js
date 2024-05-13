@@ -3,10 +3,7 @@ const input = document.getElementById('inp');
 const button = document.getElementById('btn')
 input.addEventListener('input',fetchData)
 function fetchData(){
-
- 
-
-    fetch(`https://www.omdbapi.com/?s=${input.value}&apikey=c5b1cbfc`,{headers: headers})
+    fetch(`https://www.omdbapi.com/?s=${input.value}&apikey=c5b1cbfc`)
      .then(function(res){
         console.log(res);
     })
