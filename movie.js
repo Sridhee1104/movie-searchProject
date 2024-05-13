@@ -4,19 +4,13 @@ const button = document.getElementById('btn')
 input.addEventListener('input',fetchData)
 function fetchData(){
 
-    const headers = {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin" : "*"
-      };
-
-      const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+ 
 
     fetch(`https://www.omdbapi.com/?s=${input.value}&apikey=c5b1cbfc`,{headers: headers})
      .then(function(res){
         console.log(res);
     })
      .then(function(data){
-        console.log(data)
         displayData(data.search)
     })
     .catch(function(err){console.log(err)})
